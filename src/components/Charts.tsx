@@ -62,10 +62,10 @@ export const SalesTrendChart: React.FC<SalesTrendChartProps> = ({ data }) => {
             <Line
               type="monotone"
               dataKey="revenue"
-              stroke="#3B82F6"
+              stroke="#7C3AED"
               strokeWidth={3}
-              dot={{ fill: '#3B82F6', strokeWidth: 2, r: 5, stroke: 'white' }}
-              activeDot={{ r: 7, stroke: '#3B82F6', strokeWidth: 2, fill: 'white' }}
+              dot={{ fill: '#7C3AED', strokeWidth: 2, r: 5, stroke: 'white' }}
+              activeDot={{ r: 7, stroke: '#7C3AED', strokeWidth: 2, fill: 'white' }}
             />
           </LineChart>
         </ResponsiveContainer>
@@ -101,7 +101,7 @@ export const CategoryPerformanceChart: React.FC<CategoryPerformanceChartProps> =
             <Tooltip
               formatter={(value: number) => [`$${value.toLocaleString()}`, 'Revenue']}
             />
-            <Bar dataKey="revenue" fill="#3B82F6" radius={[4, 4, 0, 0]} />
+            <Bar dataKey="revenue" fill="#8B5CF6" radius={[4, 4, 0, 0]} />
           </BarChart>
         </ResponsiveContainer>
       </div>
@@ -117,7 +117,18 @@ interface RevenueByCategoryChartProps {
   }>;
 }
 
-const COLORS = ['#8B5CF6', '#3B82F6', '#A78BFA', '#6366F1', '#7C3AED', '#1E40AF'];
+const COLORS = [
+  '#7C3AED', // Deep purple - primary
+  '#3B82F6', // Bright blue - secondary
+  '#EC4899', // Pink accent
+  '#10B981', // Emerald green
+  '#F59E0B', // Amber
+  '#EF4444', // Red
+  '#8B5CF6', // Medium purple
+  '#06B6D4', // Cyan
+  '#F97316', // Orange
+  '#84CC16', // Lime
+];
 
 export const RevenueByCategoryChart: React.FC<RevenueByCategoryChartProps> = ({ data }) => {
   return (

@@ -19,10 +19,10 @@ export const KPICard: React.FC<KPICardProps> = ({
   color = 'blue'
 }) => {
   const colorClasses = {
-    green: 'text-blue-600 bg-blue-50 border-blue-200',
+    green: 'text-emerald-600 bg-emerald-50 border-emerald-200',
     blue: 'text-purple-600 bg-purple-50 border-purple-200',
-    red: 'text-purple-600 bg-purple-50 border-purple-200',
-    yellow: 'text-blue-600 bg-blue-50 border-blue-200',
+    red: 'text-red-600 bg-red-50 border-red-200',
+    yellow: 'text-amber-600 bg-amber-50 border-amber-200',
   };
 
   const changeSymbol = change && change >= 0 ? '+' : '';
@@ -37,8 +37,8 @@ export const KPICard: React.FC<KPICardProps> = ({
             <div className="flex items-center mt-3">
               <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold ${
                 change >= 0 
-                  ? 'text-blue-700 bg-blue-50 border border-blue-200' 
-                  : 'text-purple-700 bg-purple-50 border-purple-200'
+                  ? 'text-emerald-700 bg-emerald-50 border border-emerald-200' 
+                  : 'text-red-700 bg-red-50 border border-red-200'
               }`}>
                 <svg className={`w-3 h-3 mr-1 ${change >= 0 ? '' : 'transform rotate-180'}`} fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L6.707 7.707a1 1 0 01-1.414 0z" clipRule="evenodd" />

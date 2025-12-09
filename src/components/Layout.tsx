@@ -9,12 +9,12 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-purple-50/30">
       {/* Mobile sidebar toggle */}
       <div className="lg:hidden">
         <button
           onClick={() => setSidebarOpen(true)}
-          className="fixed top-6 left-6 z-50 p-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg shadow-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200 border border-purple-200"
+          className="fixed top-6 left-6 z-50 p-3 bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-lg shadow-lg hover:from-purple-700 hover:to-purple-800 transition-all duration-200 border border-purple-500"
           aria-label="Open sidebar"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

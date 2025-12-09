@@ -2,6 +2,15 @@ import React from 'react';
 import { Card } from './Card';
 import type { CategoryIncome } from '../utils/data';
 
+const BAR_COLORS = [
+  'bg-purple-600',
+  'bg-blue-600', 
+  'bg-pink-600',
+  'bg-emerald-600',
+  'bg-amber-600',
+  'bg-red-600',
+];
+
 interface IncomeByCategoryProps {
   categories: CategoryIncome[];
 }
@@ -10,7 +19,7 @@ export const IncomeByCategory: React.FC<IncomeByCategoryProps> = ({ categories }
   return (
     <Card title="Income by Category">
       <div className="space-y-4">
-        {categories.map((category) => (
+        {categories.map((category, index) => (
           <div key={category.category} className="flex items-center justify-between">
             <div className="flex-1">
               <div className="flex items-center justify-between mb-1">
@@ -23,7 +32,7 @@ export const IncomeByCategory: React.FC<IncomeByCategoryProps> = ({ categories }
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2">
                 <div
-                  className="bg-blue-600 h-2 rounded-full"
+                  className={`${BAR_COLORS[index % BAR_COLORS.length]} h-2 rounded-full`}
                   style={{ width: `${category.percentage}%` }}
                 ></div>
               </div>
